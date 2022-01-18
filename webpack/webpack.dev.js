@@ -18,6 +18,7 @@ const devConfig = {
 		open: true,
 		hot: true,
 		compress: true,
+		host: '0.0.0.0',
 		proxy: {
 			'/api': {
 				target: 'http://localhost:3000',
