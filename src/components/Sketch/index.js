@@ -14,11 +14,11 @@ class Sketch extends React.Component {
 
   handleClose = () => {
     this.setState({ displayColorPicker: false })
+    this.props.colorPick(this.state.color)
   };
 
   handleChange = color => {
     this.setState({ color: color.hex })
-    this.props.colorPick(color.hex)
   };
 
   render() {

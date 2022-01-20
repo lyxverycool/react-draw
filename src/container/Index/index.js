@@ -55,16 +55,10 @@ export default () => {
 
   const clear = () => setLines([])
 
-  const colorPickBack = useCallback(
-    backColor => {
-      setColor(backColor)
-    },
-    [],
-  )
+  const colorPickBack = backColor => setColor(backColor)
 
   const handleExport = () => {
     const uri = stageRef.current.toDataURL()
-    console.log(uri)
     downloadURI(uri, 'stage.png')
   }
 
@@ -104,7 +98,7 @@ export default () => {
               key={i}
               points={line.points}
               stroke={line.color}
-              strokeWidth={30}
+              strokeWidth={5}
               tension={0.5}
               lineCap="round"
               globalCompositeOperation={
